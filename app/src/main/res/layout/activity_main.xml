@@ -24,17 +24,17 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
         android:layout_marginBottom="48dp"
         app:layout_constraintBottom_toTopOf="@+id/title"
-        app:layout_constraintStart_toStartOf="@+id/guessings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_eyeball" />
 
     <TextView
         android:id="@+id/guessings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="34dp"
+        android:layout_marginBottom="35dp"
         android:background="@color/white"
         android:text="Click on generate to start"
         app:layout_constraintBottom_toTopOf="@+id/up"
@@ -46,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="38dp"
         android:backgroundTint="@color/orange"
         android:text="down"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,17 +74,16 @@
         app:layout_constraintEnd_toStartOf="@+id/up"
         app:layout_constraintTop_toBottomOf="@+id/up" />
 
-
     <Button
         android:id="@+id/guessed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
         android:backgroundTint="@color/teal_700"
         android:text="Guessed"
         android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/generate"
+        app:layout_constraintEnd_toEndOf="@+id/generate" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

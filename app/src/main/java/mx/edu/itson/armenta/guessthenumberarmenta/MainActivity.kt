@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             num = Random.nextInt(minValue, maxValue)
             guessings.setText(num.toString())
             generate.visibility= View.INVISIBLE
-            guessed.visibility=View.GONE
+            guessed.visibility=View.VISIBLE
         }
 
         up.setOnClickListener {
@@ -45,12 +45,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         down.setOnClickListener {
-            minValue=num
+            maxValue=num
             if (checkingLimits()){
                 num=Random.nextInt(minValue,maxValue)
                 guessings.setText(num.toString())
             }else{
-                guessings.setText("No puede ser. Ganaste :c")
+                guessings.setText(num.toString())
             }
         }
 
